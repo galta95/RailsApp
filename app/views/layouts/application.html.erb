@@ -3,11 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title><%= p @page_title%></title>
+    <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -16,15 +15,11 @@
 <body>
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-
         <%= render "shared/application_nav" %>
-
-        <%= login_helper %>
-
+        
         <%= yield %>
 
+        <%= render "shared/application_fotter" %>
         <%= source_helper("application") %>
     </div>
 </body>
