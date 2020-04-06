@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device, initial-scale=1, shrink-to-fit=no">
+
     <title><%= p @page_title%></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    
-    <%= render "shared/nav" %>
+<body>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-    <%= login_helper %>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
 
-    <%= yield %>
+        <%= render "shared/application_nav" %>
 
-    <%= source_helper("application") %>
-  </body>
+        <%= login_helper %>
+
+        <%= yield %>
+
+        <%= source_helper("application") %>
+    </div>
+</body>
+
 </html>
