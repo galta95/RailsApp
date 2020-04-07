@@ -16,17 +16,9 @@
 
 <body>
     <div class="container">
-        <%# start of nav %>
-        <div class="nav-scroller py-1 mb-2">
-            <nav class="nav d-flex justify-content-between">
-                <a class="p-2 text-muted" href="#">World</a>
-                <a class="p-2 text-muted" href="#">U.S.</a>
-                <a class="p-2 text-muted" href="#">Technology</a>
-                <a class="p-2 text-muted" href="#">Design</a>
-            </nav>
-        </div>
-        <%# end of nav %>
 
+        <%= render 'shared/blog_nav' %>
+ 
         <%# start of header %>
         <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
             <div class="col-md-6 px-0">
@@ -38,8 +30,6 @@
         <%# end of header %>
 
         <div class="row mb-2">
-
-            <%= render  "shared/nav" %>
 
             <%= yield %>
 
