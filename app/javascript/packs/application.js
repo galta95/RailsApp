@@ -16,5 +16,8 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 //= require jquery3
+//= require jquery-ujs
+//= require jquery-ui
+//= require html.sortable
 //= require popper
 //= require bootstrap-sprockets
